@@ -1,6 +1,6 @@
 const model = require('./model.js')
 const jwt = require ('jsonwebtoken')
-let pi = "http://localhost:2345"
+let pi = "https://imtihon4.herokuapp.com"
 const path = require ('path')
 const fs = require ('fs')
 module.exports = {
