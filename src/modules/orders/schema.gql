@@ -1,0 +1,24 @@
+type Query{
+	see_order(
+		is_paid:Boolean
+		user_id: ID
+	):[Order!]!
+	total_money(
+		is_paid: Boolean
+	):Any!
+}
+type Mutation{
+	add_order(
+		product_id: ID!
+		price: String!
+		is_paid: Boolean!
+	): Response!
+}
+
+type Order {
+	order_id:ID!
+	user_id: ID!
+	products: Any!	
+	total_price: String!
+	is_paid: Boolean!
+}

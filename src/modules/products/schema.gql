@@ -1,0 +1,40 @@
+type Query{
+	products(
+		pagination: Pagination = {}
+		search: String
+	): [Product!]!
+}
+
+
+type Product {
+	product_id: ID!
+	product_name: String!
+	categor_id: ID!
+	price: String!
+	short_desc: String!
+	long_desc: String!
+	picture: String!
+}
+
+type Mutation {
+	add_product(
+		product_name: String!	
+		categor_id: ID!
+		price:String!
+		short_desc:String!
+		long_desc:String!
+		picture:Upload!
+	): Response!
+	edit_product(
+		product_id:ID!
+		product_name: String
+		categor_id: ID
+		price:String
+		short_desc:String
+		long_desc:String
+		picture:Upload
+	): Response!
+	delete_product(
+		product_id:ID!
+	): Response!
+}

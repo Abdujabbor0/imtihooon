@@ -1,0 +1,21 @@
+type Query{
+	categories: [Categories!]!
+}
+
+type Categories {
+	categor_id: ID!
+	categor_name: String!
+}
+
+type Mutation {
+	add_category(
+		categor_name: String!
+	): Response!
+	edit_category(
+		categor_id: ID!
+		categor_name: String!
+	): Response!
+	delete_category(
+		categor_id: ID!
+	): Response!
+}
