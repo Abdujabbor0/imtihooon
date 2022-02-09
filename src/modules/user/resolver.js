@@ -43,7 +43,7 @@ module.exports = {
 					return {
 						status: 200,
 						message: "User qoshildi!!!",
-						user: user,
+						data: user,
 						token: jwt.sign({ id : user.user_id }, "Tommy")
 					}
 				}			
