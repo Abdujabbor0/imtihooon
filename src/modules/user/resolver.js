@@ -23,7 +23,7 @@ module.exports = {
 				if(user){
 					return {
 						status: 200,
-						message: "User ozgartirildi!!!",
+						message: "User topilid!!!",
 						data: user,
 						token
 					}
